@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <style>
-    /* Custom styles for dark carousel */
+ /* Custom styles for dark carousel */
     .carousel-dark .carousel-caption {
       color: #f8f9fa; /* Light color for captions */
       background-color: rgba(0, 0, 0, 0.3); /* Dark background with transparency */
@@ -17,22 +17,22 @@
       margin: 0 auto; /* Center captions */
     }
 
-    /* Initially hide the controls */
+ /* Carousel control visibility settings */
 .carousel-control-prev, .carousel-control-next {
   opacity: 0;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease; /* Faster transition */
   background-color: transparent;
-  width: 10%; /* Optional: make them a bit wider for easier hover */
+  width: 10%; 
 }
 
-/* Show controls on hover */
+/* On hover, show controls quickly */
 .carousel:hover .carousel-control-prev, 
 .carousel:hover .carousel-control-next {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.3); /* Light transparent dark background */
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Adjust icon size if needed */
+/* Icon sizes if needed */
 .carousel-control-prev-icon, .carousel-control-next-icon {
   width: 2rem;
   height: 2rem;
