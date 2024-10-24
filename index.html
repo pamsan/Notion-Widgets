@@ -17,6 +17,32 @@
       margin: 0 auto; /* Center captions */
     }
 
+    /* Center carousel captions */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+    text-align: center;
+}
+
+/* Show captions on mouse hover */
+.carousel-item:hover .carousel-caption {
+    display: block;
+}
+
+/* Optional: Add smooth fade-in effect */
+.carousel-caption {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.carousel-item:hover .carousel-caption {
+    opacity: 1;
+}
+
+
     .carousel-dark .carousel-indicators [data-bs-target] {
       background-color: #6c757d; /* Darker indicator dots */
     }
@@ -78,7 +104,7 @@
 </head>
 <body>
 
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+ <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
@@ -124,6 +150,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
 
 
   <!-- Bootstrap JS from CDN -->
