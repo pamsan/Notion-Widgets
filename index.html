@@ -17,22 +17,25 @@
       margin: 0 auto; /* Center captions */
     }
 
-    /* Center carousel captions */
+   /* Place the carousel-caption at the bottom */
 .carousel-caption {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none; /* Initially hidden */
-    text-align: center;
+    bottom: 0; /* Align at the bottom */
+    left: 0;
+    right: 0;
+    width: 100%; /* Take full width of the carousel */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background */
+    padding: 15px; /* Add some padding for readability */
+    text-align: center; /* Center text */
+    display: none; /* Hidden initially */
 }
 
-/* Show captions on mouse hover */
+/* Show the caption on hover */
 .carousel-item:hover .carousel-caption {
     display: block;
 }
 
-/* Optional: Add smooth fade-in effect */
+/* Smooth transition for caption visibility */
 .carousel-caption {
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
@@ -41,7 +44,6 @@
 .carousel-item:hover .carousel-caption {
     opacity: 1;
 }
-
 
     .carousel-dark .carousel-indicators [data-bs-target] {
       background-color: #6c757d; /* Darker indicator dots */
