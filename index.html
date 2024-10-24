@@ -21,13 +21,12 @@
       background-color: #6c757d; /* Darker indicator dots */
     }
 
-    /* Ensure images fit inside the caption width */
+    /* Ensure images fit inside the slider container */
     .carousel-item img {
-      width: 80%; /* Same width as captions */
-      height: auto;
-      max-height: 500px;
-      object-fit: cover;
-      margin: 0 auto; /* Center images */
+      width: 100%; /* Make image span the full width of the slider */
+      height: auto; /* Maintain aspect ratio */
+      max-height: 500px; /* Optional: Limit the height to prevent oversized images */
+      object-fit: cover; /* Ensure the image covers the container without distortion */
     }
 
     /* Bottom navigation styling */
