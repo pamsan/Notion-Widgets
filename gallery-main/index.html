@@ -20,11 +20,12 @@
 /* Ensure icons are hidden by default */
     .carousel-control-prev-icon, 
     .carousel-control-next-icon {
+      opacity: 0; /* Start hidden */
       display: none; /* Hide icons by default */
     }
     
 /* Carousel control visibility settings */
-    .carousel-control-prev, .carousel-control-next {
+    .carousel-control-prev-icon, .carousel-control-next-icon {
       opacity: 0; /* Start hidden */
       transition: opacity 0.2s ease; /* Fast transition */
       background-color: transparent;
