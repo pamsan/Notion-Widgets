@@ -4,21 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dark Themed Carousel</title>
-
-  <!-- Bootstrap CSS from CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <style>
   
     
- /* Custom styles for dark carousel */
-    .carousel-dark .carousel-caption {
-      color: #f8f9fa; /* Light color for captions */
-      background-color: rgba(0, 0, 0, 0.3); /* Dark background with transparency */
-      width: 100%; /* Consistent caption width */
-      margin: 0 auto; /* Center captions */
-    }
-
 /* new prev next CSS */
 /* Carousel control visibility settings */
 .carousel-control-prev, .carousel-control-next {
@@ -32,7 +21,7 @@
 .carousel:hover .carousel-control-prev, 
 .carousel:hover .carousel-control-next {
   opacity: 1; /* Show controls */
-  background-color: rgba(0, 0, 0, 0.15); /* Light transparent dark background */
+  background-color: rgba(0, 0, 0, 0.10); /* Light transparent dark background */
   
 }
 
@@ -42,14 +31,13 @@
   height: 2rem;
 }
 
-
     .carousel-dark .carousel-indicators [data-bs-target] {
       background-color: #6c757d; /* Darker indicator dots */
     }
 
     /* Set carousel height */
         .carousel-inner img {
-            height: 60%; /* Adjust this value as needed */
+            height: 50%; /* Adjust this value as needed */
             object-fit: cover; /* Ensures the image fits properly */
         }
 
@@ -102,8 +90,8 @@
 </head>
 <body>
 
-<!-- Link to Bootstrap CSS from CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+ <!-- Bootstrap CSS from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
