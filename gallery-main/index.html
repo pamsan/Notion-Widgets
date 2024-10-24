@@ -1,143 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark Themed Carousel</title>
-  
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Themed Carousel</title>
+    
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Set maximum width and height for the carousel */
+        .carousel {
+            max-width: 1140px; /* Adjust as needed */
+            margin: auto; /* Center the carousel */
+            overflow: hidden; /* Hide overflow */
+        }
 
-/* Set maximum width and height for the carousel */
-.carousel {
-      width:100%
-      max-width: 1140px; /* Adjust as needed */
-      max-height: auto; /* Adjust as needed */
-      margin: auto; /* Center the carousel */
-      overflow: hidden; /* Hide overflow */
-      }
+        /* Carousel control visibility settings */
+        .carousel-control-prev, .carousel-control-next {
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.2s ease; /* Fast transition */
+            z-index: 1; /* Make sure controls are on top */
+        }
 
-/* Carousel control visibility settings */
-   .carousel-control-prev, .carousel-control-next {
-      opacity: 0; /* Start hidden */
-      transition: opacity 0.2s ease; /* Fast transition */
-   }
+        /* Show controls on hover */
+        .carousel:hover .carousel-control-prev, 
+        .carousel:hover .carousel-control-next {
+            opacity: 1; /* Show controls */
+            background-color: rgba(0, 0, 0, 0.3); /* Light transparent dark background */
+            width: 10%; /* Make less wide background */
+        }
 
-/* Show controls on hover */
-   .carousel:hover .carousel-control-prev, 
-   .carousel:hover .carousel-control-next {
-      opacity: 1; /* Show controls */
-      background-color: rgba(0, 0, 0, 0.3); /* Light transparent dark background */
-      width:10%; /* make less wide bg?*/
-    }
+        /* Ensure icons are hidden by default */
+        .carousel-control-prev-icon, 
+        .carousel-control-next-icon {
+            display: block; /* Ensure icons are visible */
+            width: 2rem; /* Icon size */
+            height: 2rem; /* Icon size */
+        }
 
-  /* Ensure icons are hidden by default */
-     .carousel-control-prev-icon, 
-     .carousel-control-next-icon {
-        display: none; /* Hide icons by default */
-     }
-
-/* Icon sizes */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  width: 2rem;
-  height: 2rem;
-}
-
-    .carousel-dark .carousel-indicators [data-bs-target] {
-      background-color: #6c757d; /* Darker indicator dots */
-    }
-
-    /* Set carousel height */
+        /* Set carousel image */
         .carousel-inner img {
-            /* height: 50%; /* Adjust this value as needed */
-            /* object-fit: cover; /* Ensures the image fits properly */
-            /* max-height: 50%; 
-        } 
+            max-height: 400px; /* Adjust height as needed */
+            object-fit: cover; /* Ensures the image fits properly */
+            width: 100%;
+        }
 
-    /* Bottom navigation styling */
-    .carousel-nav {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
-    }
+        /* Indicator styles */
+        .carousel-indicators {
+            bottom: 10px; /* Adjust positioning if needed */
+        }
 
-    .carousel-nav button {
-      background-color: #6c757d;
-      border: none;
-      color: #fff;
-      padding: 10px;
-      margin: 0 5px;
-      border-radius: 5px;
-    }
-    .carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  margin-right: 0;
-  margin-left: 0;
-  list-style: none;
-}
+        .carousel-indicators button {
+            width: 40px; /* Length of the line */
+            height: 4px; /* Thickness of the line */
+            background-color: #fff; /* Color of the line */
+            border: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease-in-out;
+        }
 
-.carousel-indicators button {
-  width: 40px; /* Length of the line */
-  height: 4px; /* Thickness of the line */
-  background-color: #fff; /* Color of the line */
-  border: none;
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in-out;
-}
+        .carousel-indicators button.active {
+            opacity: 1;
+            background-color: #6c757d; /* Active line color */
+        }
 
-.carousel-indicators button.active {
-  opacity: 1;
-  background-color: #6c757d; /* Active line color */
-}
-
-.carousel-indicators button:hover {
-  opacity: 1;
-}
-  </style>
+        .carousel-indicators button:hover {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
- <!-- Bootstrap CSS from CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="1.png" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="2.png" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <img src="3.png" class="d-block w-100" alt="Slide 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-
- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
- </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="1.png" class="d-block w-100" alt="Slide 1">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="2.png" class="d-block w-100" alt="Slide 2">
-    </div>
-    <div class="carousel-item">
-      <img src="3.png" class="d-block w-100" alt="Slide 3">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-
 </body>
 </html>
