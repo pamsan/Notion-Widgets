@@ -44,6 +44,36 @@
       margin: 0 5px;
       border-radius: 5px;
     }
+    .carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.carousel-indicators button {
+  width: 40px; /* Length of the line */
+  height: 4px; /* Thickness of the line */
+  background-color: #fff; /* Color of the line */
+  border: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-indicators button.active {
+  opacity: 1;
+  background-color: #6c757d; /* Active line color */
+}
+
+.carousel-indicators button:hover {
+  opacity: 1;
+}
   </style>
 </head>
 <body>
