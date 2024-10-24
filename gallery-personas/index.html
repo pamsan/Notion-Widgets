@@ -17,23 +17,13 @@
 }
   
     
-/* new prev next CSS */
-/* PAAMMM */
-
-/* Ensure icons are hidden by default */
-    .carousel-control-prev-icon, 
-    .carousel-control-next-icon {
-         display: none; /* Hide icons by default */
-    }
-
+/* NEW prev next CSS */
 /* Carousel control visibility settings */
-    .carousel-control-prev, .carousel-control-next, 
-    .carousel-control-prev-icon, .carousel-control-next-icon  {
+    .carousel-control-prev, .carousel-control-next{
       opacity: 0; /* Start hidden */
       transition: opacity 0.2s ease; /* Fast transition */
       background-color: transparent;
     }
-
 
 /* On hover, show controls quickly */
 .carousel:hover .carousel-control-prev, 
@@ -42,6 +32,12 @@
   background-color: rgba(0, 0, 0, 0.05); /* Light transparent dark background */
   
 }
+
+/* Ensure icons are hidden by default */
+    .carousel-control-prev-icon, 
+    .carousel-control-next-icon {
+         display: none; /* Hide icons by default */
+    }
 
 /* Icon sizes */
 .carousel-control-prev-icon, .carousel-control-next-icon {
